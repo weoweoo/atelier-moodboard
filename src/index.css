@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #0c0b0a;
+  color: #ece7df;
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.canvas-viewport {
+  --grid-minor: 56px;
+  --grid-major: 280px;
+  --grid-x: 0px;
+  --grid-y: 0px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  background-color: #0c0b0a;
+  background-image:
+    linear-gradient(to right, rgb(236 231 223 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(236 231 223 / 0.045) 1px, transparent 1px),
+    linear-gradient(to right, rgb(196 165 116 / 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(196 165 116 / 0.16) 1px, transparent 1px);
+  background-size:
+    var(--grid-minor) var(--grid-minor),
+    var(--grid-minor) var(--grid-minor),
+    var(--grid-major) var(--grid-major),
+    var(--grid-major) var(--grid-major);
+  background-position:
+    var(--grid-x) var(--grid-y),
+    var(--grid-x) var(--grid-y),
+    var(--grid-x) var(--grid-y),
+    var(--grid-x) var(--grid-y);
+}
+
+.canvas-viewport.is-pan-ready,
+.canvas-viewport.is-panning {
+  cursor: grabbing;
+}
+
+.world-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
