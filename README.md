@@ -3,7 +3,7 @@
 An interactive, web-based spatial layout engine designed for fashion designers and visual artists.
 
 ## Tech Stack
-- **Framework:** React + Vite / Next.js
+- **Framework:** React + Vite 
 - **Styling:** Tailwind CSS
 - **Icons:** Lucide React
 - **State & Canvas:** React Hooks, HTML5 Canvas API, Custom DOM Math Engine
@@ -16,6 +16,11 @@ An interactive, web-based spatial layout engine designed for fashion designers a
 - Canvas export to JSON and high-res PNG
 
 ## Getting Started
-``` bash
+Requires Node.js 18+.
+
+```bash
 npm install
 npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
